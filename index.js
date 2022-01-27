@@ -154,7 +154,7 @@ app.delete("/sandwiches/sandwich/:sandwich_id/:ingredient_id", async (req, res) 
 })
 
 //delete a specific sandwich made by id
-app.delete("/sandwiches/sandwich/sandwich_id", async (req, res) => {
+app.delete("/sandwiches/sandwich/:sandwich_id", async (req, res) => {
     try {
         const sandwich_id = req.params.sandwich_id;
         const sandwich_ingr = await pool.query(
